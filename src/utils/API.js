@@ -19,6 +19,15 @@ export function getQuestions() {
   });
 }
 
+export function getInitialData() {
+  return Promise.all([getUsers(), getQuestions()]).then(
+    ([users, questions]) => ({
+      users,
+      questions,
+    })
+  );
+}
+
 function formatQuestion({ optionOneText, optionTwoText, author }) {
   return {
     id: generateUID(),
