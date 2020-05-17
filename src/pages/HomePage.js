@@ -4,7 +4,11 @@ import { connect } from "react-redux";
 class HomePage extends Component {
   state = {};
   render() {
-    return <h1>HomePage</h1>;
+    return (
+      <div>
+        <h1>HomePage</h1>
+      </div>
+    );
   }
 }
 

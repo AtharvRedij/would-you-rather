@@ -10,6 +10,7 @@ import { connect } from "react-redux";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import { handleInitialData } from "./actions/shared";
+import Navbar from "./components/Navbar";
 
 class App extends Component {
   componentDidMount() {
@@ -34,10 +35,13 @@ class App extends Component {
               <Redirect to="/login" />
             </Fragment>
           ) : (
-            <Switch>
-              <Route path="/" exact component={HomePage} />
-              <Route path="/login" exact component={LoginPage} />
-            </Switch>
+            <Fragment>
+              <Navbar />
+              <Switch>
+                <Route path="/" exact component={HomePage} />
+                <Route path="/login" exact component={LoginPage} />
+              </Switch>
+            </Fragment>
           )}
         </Fragment>
       </Router>
