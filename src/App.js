@@ -11,6 +11,7 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import { handleInitialData } from "./actions/shared";
 import Navbar from "./components/Navbar";
+import NewQuestion from "./pages/NewQuestion";
 
 class App extends Component {
   componentDidMount() {
@@ -39,6 +40,7 @@ class App extends Component {
               <Navbar />
               <Switch>
                 <Route path="/" exact component={HomePage} />
+                <Route path="/question/new" exact component={NewQuestion} />
                 <Route path="/login" exact component={LoginPage} />
               </Switch>
             </Fragment>
