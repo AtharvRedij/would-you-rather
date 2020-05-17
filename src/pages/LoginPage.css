@@ -1,0 +1,30 @@
+.login-container {
+  border: 1px solid grey;
+  margin: 1em auto;
+  max-width: 40em;
+}
+
+.login-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f3f4f5;
+}
+
+.login-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#login-label-1 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0.5em;
+}
+
+#login-as-label {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0.5em;
+}

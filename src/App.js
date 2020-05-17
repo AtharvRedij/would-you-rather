@@ -23,13 +23,22 @@ class App extends Component {
       <Router>
         <Fragment>
           <LoadingBar />
-          <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/login" exact component={LoginPage} />
-          </Switch>
+          {/* 
+          1. If loading is true display nothing 
+          2. loading becomes false but there is no logged in user,
+          so set url path for login and render login page
+          3. else set other URL paths for later use */}
           {loading === true ? null : authedUser === null ? (
-            <Redirect to="/login" />
-          ) : null}
+            <Fragment>
+              <Route path="/login" exact component={LoginPage} />
+              <Redirect to="/login" />
+            </Fragment>
+          ) : (
+            <Switch>
+              <Route path="/" exact component={HomePage} />
+              <Route path="/login" exact component={LoginPage} />
+            </Switch>
+          )}
         </Fragment>
       </Router>
     );
@@ -38,8 +47,10 @@ class App extends Component {
 
 const mapStateToProps = ({ users, authedUser }) => {
   return {
+    // loading true if not users in store
     loading: Object.keys(users).length === 0,
     authedUser,
   };
 };
+
 export default connect(mapStateToProps)(App);

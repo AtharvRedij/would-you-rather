@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
 class HomePage extends Component {
   state = {};
@@ -7,4 +8,12 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage;
+const mapStateToProps = ({ users, questions, authedUser }) => {
+  return {
+    users,
+    questions,
+    authedUser,
+  };
+};
+
+export default connect(mapStateToProps)(HomePage);
