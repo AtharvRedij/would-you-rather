@@ -31,7 +31,7 @@ class LoginPage extends Component {
     const { userIds, users } = this.state;
 
     return (
-      <select id="user" onChange={this.handleUserSelect}>
+      <select className="usersDropdown" onChange={this.handleUserSelect}>
         {userIds.map((id) => (
           <option key={id} value={id}>
             {users[id].name}
@@ -52,12 +52,14 @@ class LoginPage extends Component {
       <div className="login-container">
         <div className="login-header">
           <div id="login-label-1">Welcome to the Would You Rather App!</div>
-          <div>Please sign in to continue</div>
+          <div id="login-label-2">Please sign in to continue</div>
         </div>
         <div className="login-info">
           <div id="login-as-label">Sign In As</div>
           <this.UsersDropdown />
-          <button onClick={this.handleLogin}>Sign In</button>
+          <div className="sign-in-button" onClick={this.handleLogin}>
+            Sign In
+          </div>
         </div>
       </div>
     );

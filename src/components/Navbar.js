@@ -4,19 +4,34 @@ import { connect } from "react-redux";
 import { setAuthedUser } from "../actions/authedUser";
 import "./Navbar.css";
 
-const Navbar = ({ user, dispatch, history }) => {
+const Navbar = ({ user, dispatch, history, location }) => {
   return (
     <div className="navbar">
       <div className="navbar-primary-nav">
-        <NavLink className="nav-item" to="/">
+        <NavLink
+          className={`nav-item ${
+            location.pathname === "/" ? "nav-item-active" : ""
+          }`}
+          to="/"
+        >
           Home
         </NavLink>
 
-        <NavLink className="nav-item" to="/question/new">
+        <NavLink
+          className={`nav-item ${
+            location.pathname === "/question/new" ? "nav-item-active" : ""
+          }`}
+          to="/question/new"
+        >
           New Question
         </NavLink>
 
-        <NavLink className="nav-item" to="/leaderboard">
+        <NavLink
+          className={`nav-item ${
+            location.pathname === "/leaderboard" ? "nav-item-active" : ""
+          }`}
+          to="/leaderboard"
+        >
           Leaderboard
         </NavLink>
       </div>

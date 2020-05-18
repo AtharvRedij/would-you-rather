@@ -6,7 +6,6 @@ const QuestionPreview = (props) => {
   const {
     quesId,
     category,
-    author,
     authorName,
     authorAvatar,
     optionOne,
