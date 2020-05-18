@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import UnansweredQuestionsList from "../components/UnansweredQuestionsList";
+import AnsweredQuestionsList from "../components/AnsweredQuestionsList";
 import "./HomePage.css";
 
 class HomePage extends Component {
@@ -39,7 +40,7 @@ class HomePage extends Component {
         {category === "unanswered" ? (
           <UnansweredQuestionsList />
         ) : (
-          <h1>Answered</h1>
+          <AnsweredQuestionsList />
         )}
       </div>
     );
