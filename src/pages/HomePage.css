@@ -1,0 +1,21 @@
+.question-category-selector {
+  display: flex;
+  flex-direction: row;
+  padding: 1.5em;
+  width: min-content;
+  margin: 0 auto;
+}
+
+.question-category {
+  margin-right: 2em;
+  padding: 1em;
+  cursor: pointer;
+  background: #f7f7f7;
+  border-radius: 0.8em;
+}
+
+.active-category {
+  background: #5bc0de;
+  color: white;
+  cursor: pointer;
+}

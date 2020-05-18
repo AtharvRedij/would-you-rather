@@ -1,4 +1,6 @@
-import { users, questions } from "./DATA.js";
+import data from "./DATA.js";
+let users = data.users;
+let questions = data.questions;
 
 function generateUID() {
   return (
