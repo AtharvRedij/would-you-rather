@@ -22,8 +22,7 @@ const QuestionPreview = (props) => {
         <div className="question-preview-info">
           <div>Would you rather</div>
           <div>{optionOne}</div>
-          <div>or</div>
-          <div>{optionTwo}</div>
+          <div>or...</div>
           <Link to={`question/${quesId}`}>
             {category === "unans" ? "Answer" : "View Results"}
           </Link>

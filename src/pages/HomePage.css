@@ -1,13 +1,16 @@
 .question-category-selector {
   display: flex;
   flex-direction: row;
-  padding: 1.5em;
+  padding: 0 1em;
   width: min-content;
   margin: 0 auto;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid black;
 }
 
 .question-category {
-  margin-right: 2em;
+  margin: 0 1em;
   padding: 1em;
   cursor: pointer;
   background: #f7f7f7;
@@ -15,7 +18,7 @@
 }
 
 .active-category {
-  background: #5bc0de;
+  background: #31b6df;
   color: white;
   cursor: pointer;
 }
