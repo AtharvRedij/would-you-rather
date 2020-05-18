@@ -9,7 +9,6 @@ const QuestionPreview = (props) => {
     authorName,
     authorAvatar,
     optionOne,
-    optionTwo,
   } = props.question;
 
   return (
