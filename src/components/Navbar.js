@@ -19,9 +19,9 @@ const Navbar = ({ user, dispatch, history, location }) => {
 
         <NavLink
           className={`nav-item ${
-            location.pathname === "/question/new" ? "nav-item-active" : ""
+            location.pathname === "/add" ? "nav-item-active" : ""
           }`}
-          to="/question/new"
+          to="/add"
         >
           New Question
         </NavLink>

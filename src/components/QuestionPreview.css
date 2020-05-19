@@ -25,7 +25,8 @@
 .question-preview-content img {
   margin-left: 0.5em;
   margin-right: 1.2em;
-  width: 8em;
+  width: 7em;
+  height: 7em;
   border-right: 1px solid rgba(0, 0, 0, 0.4);
   padding-right: 0.5em;
 }

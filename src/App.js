@@ -12,6 +12,7 @@ import LoginPage from "./pages/LoginPage";
 import Navbar from "./components/Navbar";
 import NewQuestion from "./pages/NewQuestion";
 import QuestionPage from "./pages/QuestionPage";
+import Leaderboard from "./pages/Leaderboard";
 import { handleInitialData } from "./actions/shared";
 
 class App extends Component {
@@ -41,8 +42,9 @@ class App extends Component {
               <Navbar />
               <Switch>
                 <Route path="/" exact component={HomePage} />
-                <Route path="/question/new" exact component={NewQuestion} />
+                <Route path="/add" exact component={NewQuestion} />
                 <Route path="/question/:id" exact component={QuestionPage} />
+                <Route path="/leaderboard" exact component={Leaderboard} />
                 <Route path="/login" exact component={LoginPage} />
               </Switch>
             </Fragment>
