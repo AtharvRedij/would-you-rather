@@ -1,18 +1,24 @@
 .new-question-container {
   margin: 1em auto;
   border: 1px solid black;
-  max-width: 40em;
+  max-width: 30em;
+  border-radius: 1em;
 }
 
 .new-question-header {
   padding: 1em;
-  background-color: #f3f4f5;
-  font-weight: bold;
+  background-color: #f1f1f1;
+  font-weight: 600;
+  font-size: 1.1em;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
 }
 
 h4 {
   margin: 1em auto;
   width: fit-content;
+  font-weight: 600;
+  font-size: 1.05em;
 }
 
 .option-form {
@@ -26,4 +32,22 @@ h4 {
   width: 20em;
   height: 2em;
   padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 0.8em;
+  font-size: 14px;
+  padding-left: 1em;
+}
+
+.option-form-submit-btn {
+  cursor: pointer;
+  border: none;
+  margin: 1em;
+  margin-bottom: 0;
+  width: 5em;
+  padding: 0.9em 1em;
+  border-radius: 0.4em;
+  font-weight: 500;
+  font-size: 0.9em;
+  background: #0275d8;
+  color: white;
 }

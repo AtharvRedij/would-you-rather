@@ -27,6 +27,8 @@ class NewQuestion extends Component {
     const { dispatch } = this.props;
 
     dispatch(handleAddQuestion(optionOne, optionTwo));
+
+    this.props.history.replace("/");
   };
 
   render() {
@@ -52,7 +54,12 @@ class NewQuestion extends Component {
             value={this.state.optionTwo}
             onChange={this.handleChange}
           />
-          <button onClick={this.handleSubmit}>Submit</button>
+          <button
+            className="option-form-submit-btn"
+            onClick={this.handleSubmit}
+          >
+            Submit
+          </button>
         </form>
       </div>
     );
