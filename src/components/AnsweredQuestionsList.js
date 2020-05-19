@@ -9,6 +9,16 @@ class UnansweredQuestionsList extends Component {
 
     return (
       <div>
+        {ansQues.length === 0 ? (
+          <h1
+            style={{
+              margin: "2em auto",
+              width: "fit-content",
+            }}
+          >
+            No Questions Here...
+          </h1>
+        ) : null}
         {ansQues.map((question) => (
           <QuestionPreview key={question.quesId} question={question} />
         ))}
@@ -35,12 +45,13 @@ const mapStateToProps = ({ users, questions, authedUser }) => {
         authorAvatar: users[question.author].avatarURL,
         optionOne: question.optionOne.text,
         optionTwo: question.optionTwo.text,
+        timestamp: question.timestamp,
       };
       ansQues.push(ques);
     }
   });
   return {
-    ansQues,
+    ansQues: ansQues.sort((ques1, ques2) => ques2.timestamp - ques1.timestamp),
   };
 };
 
